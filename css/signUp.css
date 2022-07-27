@@ -42,6 +42,9 @@
     border: 1px solid var(--primary-color);
     border-radius: 8px;
 }
+.btn a{
+    color: var(--primary-color);
+}
 .btn_alt{
     background-color: #2B7A78;
     color: #FEFEFE;
@@ -127,6 +130,7 @@
     position: absolute;
     width: var( --place-icon-size);
     right: 1rem;
+    cursor: pointer;
 }
 .checkbox{
     flex-direction: row;
