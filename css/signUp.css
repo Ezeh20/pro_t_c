@@ -181,12 +181,3 @@
     width: var( --place-icon-size);
 }
 
-.vv.error input {
-    border-color: #ED4A1F;
-}
-.vv.error .input_error{
-   visibility: visible;
-}
-.vv.success .input_error{
-    visibility: hidden;
-}
