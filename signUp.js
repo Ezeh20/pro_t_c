@@ -2,7 +2,6 @@ const xIcon=document.querySelector('.x_icon_two')
 const inputType=document.getElementById('password')
 
 
-
 let password=true
 
 xIcon.addEventListener('click', ()=>{
