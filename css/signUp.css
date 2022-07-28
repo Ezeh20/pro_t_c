@@ -23,13 +23,17 @@
     margin-left: var( --margin-sx);
     margin-right: var( --margin-sx);
 }
-
+.container_two{
+    max-width: 1200px;
+    margin-left: var( --margin-ss);
+    margin-right: var( --margin-ss);
+}
 
 .nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1rem 0;
 }
 .logo{
     font-size: var(--section-size);
@@ -42,12 +46,15 @@
     border: 1px solid var(--primary-color);
     border-radius: 8px;
 }
-.btn a{
-    color: var(--primary-color);
+.link_{
+    font-size: var(--text-size);
+    color:#2B7A78;
+    font-weight: 600;
 }
 .btn_alt{
     background-color: #2B7A78;
     color: #FEFEFE;
+    width: 100%;
 }
 .sign_up_section{
     display: grid;
@@ -99,27 +106,28 @@
     display: flex;
     flex-direction: column;
 }
-.label_form{
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-}
+
 .input{
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-    position: relative;
-    
+    margin-bottom: 5px;
 }
 .svg_con{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+   
     
+}
+
+.vv{
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 .input_field{
    width: 100%;
    padding: 12px 40px;
-   
+   margin-top: 1px;
 }
 .x_icon{
     position: absolute;
@@ -132,7 +140,14 @@
     right: 1rem;
     cursor: pointer;
 }
+.input_error{
+    position: absolute;
+    width: var( --place-icon-size);
+    visibility: hidden;
+    right: 1rem;
+}
 .checkbox{
+    display: flex;
     flex-direction: row;
     column-gap: .5rem;
     margin: .9rem 0;
@@ -166,3 +181,12 @@
     width: var( --place-icon-size);
 }
 
+.vv.error input {
+    border-color: #ED4A1F;
+}
+.vv.error .input_error{
+   visibility: visible;
+}
+.vv.success .input_error{
+    visibility: hidden;
+}

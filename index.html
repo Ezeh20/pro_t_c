@@ -11,11 +11,9 @@
 </head>
 <body>
     <header>
-        <nav class="nav">
+        <nav class="nav container_two">
             <h1 class="logo">Project 71</h1>
-            <button class=" btn">
-                <a href="#" > Sign in</a>
-            </button>
+            <a href="#"  class="link_"> Sign in</a>
         </nav>
     </header>
     <main>
@@ -25,42 +23,55 @@
                            <img src="img/amico.svg" alt="hero" class="hero_img">
                        </div>
                        <div class="form_part">
-                        <form action="#" class="form">
+                        <form action="#" class="form" id="form">
                             <h1 class=" section_title sign_up">Sign up</h1>
-                            <div class=" label_form">
-                            <label for="firstName" class="input">First Name
-                                <div class="svg_con">
-                                <input type="text" class=" input_field" placeholder="john" id="firstName">
-                                <img src="img/icons/user.svg" alt="" class="x_icon">
+                            
+                                <div class="svg_con ">
+                                    <label for="firstName" class="input">First Name</label>
+                                    <div class="vv">
+                                       <input type="text" class=" input_field" placeholder="john" id="firstName">
+                                       <img src="img/icons/user.svg" alt="" class="x_icon">
+                                       <img src="/img/icons/Icons.svg" alt="" class="input_error">
+                                     </div>
                                 </div>
-                            </label>
-                            <label for="lastName" class="input">Last Name
-                                <div class="svg_con">
-                                <input type="text" class=" input_field" placeholder="Doe" id="lastName">
-                                <img src="img/icons/user.svg" alt="" class="x_icon">
+
+                                <div class="svg_con ">
+                                     <label for="lastName" class="input">Last Name</label>
+                                     <div class="vv">
+                                        <input type="text" class=" input_field" placeholder="Doe" id="lastName">
+                                         <img src="img/icons/user.svg" alt="" class="x_icon">
+                                         <img src="/img/icons/Icons.svg" alt="" class="input_error">
+                                      </div>
                                 </div>
-                            </label>
-                            <label for="Email" class="input">Email
+                
                                 <div class="svg_con">
-                                <input type="text" class=" input_field" placeholder="johndoe@gmail.com" id="Email">
-                                <img src="img/icons/sms.svg" alt="" class="x_icon">
+                                    <label for="Email" class="input">Email</label>
+                                    <div class="vv">
+                                       <input type="text" class=" input_field" placeholder="johndoe@gmail.com" id="Email">
+                                        <img src="img/icons/sms.svg" alt="" class="x_icon">
+                                        <img src="/img/icons/Icons.svg" alt="" class="input_error">
+                                     </div>
+                                      
                                 </div>
-                            </label>
-                            <label for="password" class="input">Password
+                               
                                 <div class="svg_con">
-                                <input type="password" class=" input_field" placeholder="********" required id="password">
-                                <img src="img/icons/lock.svg" alt="" class="x_icon">
-                                <img src="img/icons/eye-slash.svg" alt="" class="x_icon_two">
+                                   <label for="password" class="input">Password</label>
+                                   <div class="vv">
+                                       <input type="password" class=" input_field" placeholder="********"  id="password">
+                                        <img src="img/icons/lock.svg" alt="" class="x_icon">
+                                        <img src="img/icons/eye-slash.svg" alt="" class="x_icon_two">
+                                    </div>
+                                     <small></small>
                                 </div>
-                            </label>
-                            <label for="" class="input checkbox">
-                                <input type="checkbox" class=" inp"  required>
-                                <p>I Agree to all the 
-                                    <a href="#" class="terms">Terms and Conditions</a>
-                                </p>
+                            
+                              <label for="checkbox" class=" checkbox">
+                                  <input type="checkbox" class=" inp" >
+                                     <p>I Agree to all the 
+                                     <a href="#" class="terms">Terms and Conditions</a>
+                                  </p>
                             </label>
                             <button class="btn btn_alt">Sign up</button>
-                            </div>
+                            
                         </form>
                         <div class="form_bottom">
                             <h2 class="section_title section_title_normal">Or Sign Up with</h2>
