@@ -1,4 +1,4 @@
-@import url(/css/global.css);
+@import url(global.css);
 
 .section_title{
     font-size: var(--section-size);
