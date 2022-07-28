@@ -26,50 +26,62 @@
                         <form action="#" class="form" id="form">
                             <h1 class=" section_title sign_up">Sign up</h1>
 
-                                <div class="svg_con ">
+                                <div class="form_field ">
                                     <label for="firstName" class="input">First Name</label>
-                                    <div class="vv">
+                                    <div class="svg_con">
                                        <input type="text" class=" input_field" placeholder="john" name="firstName" id="firstName">
                                        <img src="img/icons/user.svg" alt="" class="x_icon">
-                                     </div>
+                                       <small>
+                                           <img src="img/icons/Icons.svg" alt="" class="error">
+                                           First Name cannot be empty
+                                        </small>
+                                    </div>
                                 </div>
 
-                                <div class="svg_con ">
+                                <div class="form_field ">
                                      <label for="lastName" class="input">Last Name</label>
-                                     <div class="vv">
+                                     <div class="svg_con">
                                         <input type="text" class=" input_field" placeholder="Doe" name="lastName" id="lastName">
                                          <img src="img/icons/user.svg" alt="" class="x_icon">
-
-                                      </div>
+                                         <small>
+                                             <img src="img/icons/Icons.svg" alt="" class="error">
+                                             Last Name cannot be empty
+                                        </small>
+                                        </div>
                                 </div>
                 
-                                <div class="svg_con">
+                                <div class="form_field">
                                     <label for="email" class="input">Email</label>
-                                    <div class="vv">
-                                       <input type="text" class=" input_field" placeholder="johndoe@gmail.com" name="email" id="email">
+                                    <div class="svg_con">
+                                       <input type="email" class=" input_field" placeholder="johndoe@gmail.com" name="email" id="email">
                                         <img src="img/icons/sms.svg" alt="" class="x_icon">
+                                        <small>
+                                            <img src="img/icons/Icons.svg" alt="" class="error">
+                                            Provide a valid email address
+                                        </small>
                                      </div>
-                                      
                                 </div>
                                
-                                <div class="svg_con">
+                                <div class="form_field">
                                    <label for="password" class="input">Password</label>
-                                   <div class="vv">
-                                       <input type="password" class=" input_field" placeholder="********" name="password" id="password">
+                                   <div class="svg_con">
+                                       <input type="password" class=" input_field " placeholder="********" name="password" id="password">
                                         <img src="img/icons/lock.svg" alt="" class="x_icon">
                                         <img src="img/icons/eye-slash.svg" alt="" class="x_icon_two">
-                                    </div>
-                                     <small></small>
+                                        <small class=" pass_err">
+                                            <img src="img/icons/Icons.svg" alt="" class="error">
+                                            Enter a password
+                                        </small>
+                                        </div>
                                 </div>
                             
-                              <label for="checkbox" class=" checkbox">
-                                  <input type="checkbox" class=" inp" name="checkbox" id="checkbox">
-                                     <p >I Agree to all the 
-                                     <a href="#" class="terms">Terms and Conditions</a>
-                                  </p>
-                            </label>
+                                <div class="check_area">
+                                <label for="checkbox" class=" checkbox"></label>
+                                   <input type="checkbox" class=" inp" name="checkbox"  id="checkbox" required>
+                                     <p >I Agree to all the <a href="#" class="terms">Terms and Conditions</a></p>
+                                </div>
+
                             <button class="btn btn_alt">Sign up</button>
-                            
                         </form>
                         <div class="form_bottom">
                             <h2 class="section_title section_title_normal">Or Sign Up with</h2>

@@ -54,11 +54,12 @@ font-family: 'Poppins', sans-serif; */
   .img_part{
       border-radius: 30px 0 0 30px; 
       width: 406px;
-      height: 812px;
   }
+  small.pass_err{
+    margin-top: -1.5rem;
+}
   .form_part{
       width: 590px;
-      height: 812px;
       padding:64px 96px;
   }
   .hero_img{
