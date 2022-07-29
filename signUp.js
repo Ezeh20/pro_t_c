@@ -5,8 +5,8 @@ const firstName=document.getElementById('firstName')
 const lastName=document.getElementById('lastName')
 const email=document.getElementById('email')
 
-let password=true
 
+let password=true
 //onclick, check if the input type is [password] if it is, switch the input type [text] 
 xIcon.addEventListener('click', ()=>{
     if(password){
@@ -25,51 +25,140 @@ xIcon.addEventListener('click', ()=>{
 
 form.addEventListener('submit', e=>{
     e.preventDefault()
-    // call the validate function on click
-    validateInput()
+    //on submit, carryout the following checks
+    let firstnameValid=checkFirstName()
+    let lastnameValid=checkLastName()
+    let emailValid=checkEmail()
+    let passwordValid=checkPassword()
+
+    //submit the form if valid
+    let isFormValid=firstnameValid && lastnameValid && emailValid && passwordValid
+
+    if(isFormValid){
+        //placeholder [redirect to the home page]
+        window.location.href="https://www.google.com/"
+    }else{
+       // console.log('inValid')
+    }
 })
 
+//debounce delay function
+const debounce = (fn, delay = 500) => {
+    let timeoutId;
+    return (...args) => {
+        // cancel the previous timer
+        if (timeoutId) {
+            clearTimeout(timeoutId);
+        }
+        // setup a new timer
+        timeoutId = setTimeout(() => {
+            fn.apply(null, args)
+        }, delay);
+    };
+};
 
-const validateInput=()=>{
-    //get the input values then remove white spaces
-    const firstNameValue=firstName.value.trim()
-    const lastNameValue=lastName.value.trim()
-    const emailValue=email.value.trim()
-    const passwordValue=inputType.value.trim()
+//gives an instant feedback to the user when values are entered 
+form.addEventListener('input', debounce(e=>{
 
-    //check if the input is  empty.If empty, throw the error
-    if(firstNameValue===''){
+    switch(e.target.id){
+        case 'firstName':
+            checkFirstName();
+            break;
+        case 'lastName':
+            checkLastName();
+            break;
+        case 'email':
+            checkEmail();
+            break;
+        case 'inputType':
+            checkPassword();
+           
+    }
+}))
+
+
+//input will return true if empty
+const isRequired =(value)=>{
+    if(value===''){
+        return true
+    }else{
+        return false
+    }
+}
+
+
+const isEmailValid = (email) => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+};
+//regX must include 8 characters including numbers and special characters
+const isPasswordSecure = (password) => {
+    const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
+    return re.test(password);
+};
+
+
+const checkFirstName=()=>{
+    let valid=false
+    const firstname=firstName.value.trim()
+    if(isRequired(firstname)){
         setErrorFor(firstName)
     }else{
         setSuccessFor(firstName)
+        valid=true
     }
-    //
-    if(lastNameValue===''){
+    return valid
+}
+const checkLastName=()=>{
+    let valid=false
+    const lastname=lastName.value.trim()
+    if(isRequired(lastname)){
         setErrorFor(lastName)
     }else{
         setSuccessFor(lastName)
+        valid=true
     }
-    //regX will be applied later
-    if(emailValue === ''){
+    return valid
+}
+
+const checkEmail=()=>{
+    let valid=false
+    const Email=email.value.trim()
+    if(!isEmailValid(Email)){
         setErrorFor(email)
     }else{
         setSuccessFor(email)
+        valid=true
     }
-   //regX will be applied later
-    if(passwordValue === ''){
+    return valid
+}
+
+const checkPassword=()=>{
+    let valid=false
+    const password=inputType.value.trim()
+     if(!isPasswordSecure(password)){
         setErrorFor(inputType)
     }else{
         setSuccessFor(inputType)
+        valid=true
     }
+    return valid
 }
-const setErrorFor=(input)=>{
+
+
+let setErrorFor=(input)=>{
     //get the parent div of the input
     const inputArea=input.parentElement;
     inputArea.className= 'svg_con error'
 }
 
-const setSuccessFor=(input)=>{
+let setSuccessFor=(input)=>{
     //get the parent div of the input
     const inputArea=input.parentElement;
     inputArea.className= 'svg_con success'
+    
+}
+
+let redirect=()=>{
+    
 }

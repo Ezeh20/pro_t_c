@@ -23,7 +23,7 @@
                            <img src="img/amico.svg" alt="hero" class="hero_img">
                        </div>
                        <div class="form_part">
-                        <form action="#" class="form" id="form">
+                        <form action="" name="signUp" class="form" id="form">
                             <h1 class=" section_title sign_up">Sign up</h1>
 
                                 <div class="form_field ">
@@ -51,9 +51,9 @@
                                 </div>
                 
                                 <div class="form_field">
-                                    <label for="email" class="input">Email</label>
+                                    <label for="text" class="input">Email</label>
                                     <div class="svg_con">
-                                       <input type="email" class=" input_field" placeholder="johndoe@gmail.com" name="email" id="email">
+                                       <input type="text" class=" input_field" placeholder="johndoe@gmail.com" name="email" id="email">
                                         <img src="img/icons/sms.svg" alt="" class="x_icon">
                                         <small>
                                             <img src="img/icons/Icons.svg" alt="" class="error">
@@ -70,7 +70,7 @@
                                         <img src="img/icons/eye-slash.svg" alt="" class="x_icon_two">
                                         <small class=" pass_err">
                                             <img src="img/icons/Icons.svg" alt="" class="error">
-                                            Enter a password
+                                            <p>Enter a password which should at least be a <br> minimum of 8 characters including a minimum <br> of 1 number and a special character [!@#$%^&*]</p>
                                         </small>
                                         </div>
                                 </div>
@@ -81,7 +81,8 @@
                                      <p >I Agree to all the <a href="#" class="terms">Terms and Conditions</a></p>
                                 </div>
 
-                            <button class="btn btn_alt">Sign up</button>
+                            <input type="submit" value="Sign up" class="btn btn_alt">
+
                         </form>
                         <div class="form_bottom">
                             <h2 class="section_title section_title_normal">Or Sign Up with</h2>
