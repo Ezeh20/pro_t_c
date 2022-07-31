@@ -1,9 +1,11 @@
+
 const xIcon=document.querySelector('.x_icon_two')
 const form=document.getElementById('form')
 const inputType=document.getElementById('password')
 const firstName=document.getElementById('firstName')
 const lastName=document.getElementById('lastName')
 const email=document.getElementById('email')
+
 
 
 let password=true
@@ -24,21 +26,20 @@ xIcon.addEventListener('click', ()=>{
 })
 
 form.addEventListener('submit', e=>{
-    e.preventDefault()
     //on submit, carryout the following checks
     let firstnameValid=checkFirstName()
     let lastnameValid=checkLastName()
     let emailValid=checkEmail()
     let passwordValid=checkPassword()
 
-    //submit the form if valid
-    let isFormValid=firstnameValid && lastnameValid && emailValid && passwordValid
-
-    if(isFormValid){
-        //placeholder [redirect to the home page]
-        window.location.href="https://www.google.com/"
+    //formValid will be true if all checks passes 
+    let formValid=firstnameValid && lastnameValid && emailValid && passwordValid
+    //submit the form if formValid is true
+    if(formValid){
+        form.submit()
+    //else prevent the form submitting
     }else{
-       // console.log('inValid')
+        e.preventDefault()
     }
 })
 
@@ -159,6 +160,3 @@ let setSuccessFor=(input)=>{
     
 }
 
-let redirect=()=>{
-    
-}

@@ -210,3 +210,10 @@ small.pass_err{
 .svg_con.error small{
     display: flex;
 }
+.error p{
+    width:100%;
+}
+
+.remove_signUp{
+    display: none;
+}
