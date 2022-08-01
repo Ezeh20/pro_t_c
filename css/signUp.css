@@ -162,10 +162,10 @@
     cursor: pointer;
 }
 .check_area{
-    margin:-15px 0 8px 0;
+    margin:-22px 0 8px 0;
 }
 .form_field .pass_err{
-    margin-top: -15px;
+    margin: -15px 0 22px 0;
 }
 .check_area .svg_con{
     display: flex;
