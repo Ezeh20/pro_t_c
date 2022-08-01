@@ -63,6 +63,9 @@ font-family: 'Poppins', sans-serif; */
       width: 590px;
       padding:64px 96px;
   }
+  .form_field .pass_err{
+    margin-top: -22px;
+}
   .hero_img{
       border-radius: 0;
       align-self: center;
