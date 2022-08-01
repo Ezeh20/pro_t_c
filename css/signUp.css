@@ -193,7 +193,7 @@ small{
     background-color: #F9C3B4;
     padding: 10px 12px;
     border-radius: 8px;
-    display:none;
+    display:flex;
     align-items: center;
     column-gap: 8px;
     color:  #ED4A1F;
@@ -214,6 +214,3 @@ small.pass_err{
     width:100%;
 }
 
-.remove_signUp{
-    display: none;
-}

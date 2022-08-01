@@ -1,11 +1,9 @@
-
 const xIcon=document.querySelector('.x_icon_two')
 const form=document.getElementById('form')
 const inputType=document.getElementById('password')
 const firstName=document.getElementById('firstName')
 const lastName=document.getElementById('lastName')
 const email=document.getElementById('email')
-
 
 
 let password=true
@@ -37,7 +35,7 @@ form.addEventListener('submit', e=>{
     //submit the form if formValid is true
     if(formValid){
         form.submit()
-    //else prevent the form submitting
+    //else prevent the form from submitting
     }else{
         e.preventDefault()
     }
@@ -73,11 +71,8 @@ form.addEventListener('input', debounce(e=>{
             break;
         case 'inputType':
             checkPassword();
-           
     }
 }))
-
-
 //input will return true if empty
 const isRequired =(value)=>{
     if(value===''){
@@ -86,8 +81,6 @@ const isRequired =(value)=>{
         return false
     }
 }
-
-
 const isEmailValid = (email) => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
@@ -97,8 +90,6 @@ const isPasswordSecure = (password) => {
     const re = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})");
     return re.test(password);
 };
-
-
 const checkFirstName=()=>{
     let valid=false
     const firstname=firstName.value.trim()
@@ -121,7 +112,6 @@ const checkLastName=()=>{
     }
     return valid
 }
-
 const checkEmail=()=>{
     let valid=false
     const Email=email.value.trim()
@@ -133,7 +123,6 @@ const checkEmail=()=>{
     }
     return valid
 }
-
 const checkPassword=()=>{
     let valid=false
     const password=inputType.value.trim()
@@ -145,18 +134,14 @@ const checkPassword=()=>{
     }
     return valid
 }
-
-
 let setErrorFor=(input)=>{
     //get the parent div of the input
     const inputArea=input.parentElement;
     inputArea.className= 'svg_con error'
 }
-
 let setSuccessFor=(input)=>{
     //get the parent div of the input
     const inputArea=input.parentElement;
-    inputArea.className= 'svg_con success'
-    
+    inputArea.className= 'svg_con success'    
 }
 
