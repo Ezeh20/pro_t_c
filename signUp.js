@@ -4,6 +4,7 @@ const inputType=document.getElementById('password')
 const firstName=document.getElementById('firstName')
 const lastName=document.getElementById('lastName')
 const email=document.getElementById('email')
+const checkBox=document.getElementById('checkbox')
 
 
 let password=true
@@ -29,9 +30,10 @@ form.addEventListener('submit', e=>{
     let lastnameValid=checkLastName()
     let emailValid=checkEmail()
     let passwordValid=checkPassword()
+    let checkBoxChecked=iScheckBoxChecked()
 
     //formValid will be true if all checks passes 
-    let formValid=firstnameValid && lastnameValid && emailValid && passwordValid
+    let formValid=firstnameValid && lastnameValid && emailValid && passwordValid && checkBoxChecked
     //submit the form if formValid is true
     if(formValid){
         form.submit()
@@ -39,7 +41,10 @@ form.addEventListener('submit', e=>{
     }else{
         e.preventDefault()
     }
+    
 })
+
+
 
 //debounce delay function
 const debounce = (fn, delay = 500) => {
@@ -66,11 +71,13 @@ form.addEventListener('input', debounce(e=>{
         case 'lastName':
             checkLastName();
             break;
-        case 'email':
-            checkEmail();
-            break;
+       
         case 'inputType':
             checkPassword();
+            break;
+        case 'checkBox':
+            iScheckBoxChecked();
+            break;
     }
 }))
 //input will return true if empty
@@ -134,6 +141,18 @@ const checkPassword=()=>{
     }
     return valid
 }
+
+const iScheckBoxChecked=()=>{
+    let valid=true
+    if(checkBox.checked){
+        setSuccessForCheck(checkBox)
+    }else{
+        setErrorForCheck(checkBox)
+        valid=false
+    }
+    return valid
+}
+
 let setErrorFor=(input)=>{
     //get the parent div of the input
     const inputArea=input.parentElement;
@@ -144,4 +163,14 @@ let setSuccessFor=(input)=>{
     const inputArea=input.parentElement;
     inputArea.className= 'svg_con success'    
 }
-
+let setErrorForCheck=(input)=>{
+    //get the parent div of the input
+    const inputArea=input.parentNode;
+    inputArea.className= 'svg_con_two error'
+    
+}
+let setSuccessForCheck=(input)=>{
+    //get the parent div of the input
+    const inputArea=input.parentElement;
+    inputArea.className= 'svg_con_two success'    
+}

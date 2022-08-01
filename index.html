@@ -12,8 +12,10 @@
 <body>
     <header>
         <nav class="nav container_two">
-            <h1 class="logo">Project 71</h1>
-            <a href="#"  class="link_"> Sign in</a>
+            <h1 class="logo">Termbuddy</h1>
+            <button class="btn btn_altt">
+                <a href="#"  class="link_"> Sign In</a>
+            </button>
         </nav>
     </header>
     <main>
@@ -66,10 +68,10 @@
                                 <div class="form_field">
                                    <label for="password" class="input">Password</label>
                                    <div class="svg_con">
-                                       <input type="password" class=" input_field " placeholder="********" name="password" id="password">
+                                       <input type="password" class="input_field " placeholder="********" name="password" id="password">
                                         <img src="img/icons/lock.svg" alt="" class="x_icon">
                                         <img src="img/icons/eye-slash.svg" alt="" class="x_icon_two">
-                                        <small class=" pass_err">
+                                        <small class="pass_err">
                                             <img src="img/icons/Icons.svg" alt="" class="error">
                                             <p >Enter a password which should at least be a  minimum of 8 characters including a minimum  of 1 number, an uppercase letter and a special character [!@#$%^&*]</p>
                                         </small>
@@ -77,11 +79,14 @@
                                 </div>
                             
                                 <div class="check_area">
-                                <label for="checkbox" class=" checkbox"></label>
-                                   <input type="checkbox" class=" inp" name="checkbox"  id="checkbox">
+                                <label for="checkbox" class="checkbox"></label>
+                                  <div class="svg_con_two">
+                                   <input type="checkbox" class=" inp" name="checkbox"  id="checkbox" value="yes">
                                      <p >I Agree to all the <a href="#" class="terms">Terms and Conditions</a></p>
-                                     <small class=" pass_err">
-                                        <p >Enter a password which should at least be a  minimum of 8 characters including a minimum  of 1 number, an uppercase letter and a special character [!@#$%^&*]</p>
+                                     </div>
+                                     <small class="pass_err">
+                                        <img src="img/icons/Icons.svg" alt="" class="error">
+                                        <p>please agree to the terms and conditions</p>
                                     </small>
                                 </div>
 

@@ -37,14 +37,18 @@
 }
 .logo{
     font-size: var(--section-size);
+    color: #2B7A78;
+    font-family: 700;
 }
 .btn{
-    font-weight: 600;
+    font-weight: 700;
     color: var(--primary-color);
+    background-color: #2B7A78;
     padding:var(--btn-padding);
+    border: 1px solid #2B7A78;
     background: none;
-    border: 1px solid var(--primary-color);
     border-radius: 8px;
+    font-family: var(--primary-font);
 }
 .link_{
     font-size: var(--text-size);
@@ -57,6 +61,14 @@
     width: 100%;
     margin-top: 5px;
     cursor: pointer;
+}
+.btn_altt{
+    background-color: #2B7A78;
+    padding:var(--btn-padding-two);
+    border-radius: 8px;
+}
+.btn_altt a{
+    color: #FEFEFE;
 }
 .sign_up_section{
     display: grid;
@@ -99,8 +111,6 @@
     justify-items: center;
     row-gap: 1.5rem;
 }
-
-
 .sign_up_section{
     padding: 3rem 0;
 }
@@ -121,7 +131,14 @@
 .svg_con{
     position: relative;
 }
-
+.svg_con_two{
+    display: flex;
+}
+.con{
+    display: flex;
+    flex-direction: row;
+    background-color: red;
+}
 .input_field{
    width: 100%;
    padding: 12px 40px;
@@ -137,7 +154,6 @@
 .oth{
     position: relative;
 }
-
 .x_icon_two{
     position: relative;
     width: var( --place-icon-size);
@@ -146,11 +162,17 @@
     cursor: pointer;
 }
 .check_area{
+    margin: -18px 0 8px 0;
+}
+.check_area .svg_con{
     display: flex;
-    margin: -12px 0 10px 0;
+}
+.check_area .pass_err{
+    margin: 6px 0 0px 0;
 }
 .inp{
     margin-right: .5rem;
+    cursor: pointer;
 }
 .input_error{
     position: absolute;
@@ -158,7 +180,9 @@
     visibility: hidden;
     right: 1rem;
 }
-
+.pass_err p{
+    width:100%;
+}
 .terms{
     color: #2B7A78;
     font-weight: 600;
@@ -178,7 +202,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    column-gap: 9%;
+    column-gap: 5%;
    /* padding: 12px 10px;*/
     padding: 10px 5px;
     width: 45%;
@@ -187,21 +211,20 @@
 .z_icon{
     width: var( --place-icon-size);
 }
+.pass_err{
+    margin-bottom: 1rem;
+    margin-top: 10rem;
+}
 small{
     margin-top: .3rem;
     font-size: var(--text-size);
     background-color: #F9C3B4;
     padding: 10px 12px;
     border-radius: 8px;
-    display:flex;
+    display:none;
     align-items: center;
     column-gap: 8px;
     color:  #ED4A1F;
-}
-
-small.pass_err{
-    margin-top: -1rem;
-    margin-bottom: 1rem;
 }
 
 .svg_con.success small{
@@ -210,7 +233,9 @@ small.pass_err{
 .svg_con.error small{
     display: flex;
 }
-.error p{
-    width:100%;
+.svg_con_two.error ~ small{
+    display: flex;
 }
-
+.svg_con_two.success ~ small{
+    display: none;
+}
