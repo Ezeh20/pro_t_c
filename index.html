@@ -6,14 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/signUp.css">
-    <link rel="stylesheet" href="css/global.css">
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav class="nav container_two">
-            <h1 class="logo">Termbuddy</h1>
-            <button class="btn btn_altt">
+            <h1 class="logo"><a href="#">Termbuddy</a></h1>
+            <button class="btn btn_altt" data-item="Sign In">
                 <a href="#"  class="link_"> Sign In</a>
             </button>
         </nav>
@@ -26,7 +25,7 @@
                        </div>
                        <div class="form_part">
                         <!--placeholder method will hook to backend later-->
-                        <form action="https://www.google.com/" name="signUp" class="form" id="form" method="get">
+                        <form action="#" name="signUp" class="form" id="form" method="post">
                             <h1 class=" section_title sign_up">Sign up</h1>
 
                                 <div class="form_field ">
@@ -54,7 +53,7 @@
                                 </div>
                 
                                 <div class="form_field">
-                                    <label for="text" class="input">Email</label>
+                                    <label for="email" class="input">Email</label>
                                     <div class="svg_con">
                                        <input type="text" class=" input_field" placeholder="johndoe@gmail.com" name="email" id="email">
                                         <img src="img/icons/sms.svg" alt="" class="x_icon">
@@ -77,35 +76,36 @@
                                         </small>
                                         </div>
                                 </div>
-                            
+                                
                                 <div class="check_area">
-                                <label for="checkbox" class="checkbox"></label>
+                                <label for="checkbox" class="input">
                                   <div class="svg_con_two">
-                                   <input type="checkbox" class=" inp" name="checkbox"  id="checkbox" value="yes">
+                                   <input type="checkbox" class=" inp" name="checkbox"  id="checkbox" >
                                      <p >I Agree to all the <a href="#" class="terms">Terms and Conditions</a></p>
                                      </div>
                                      <small class="pass_err">
                                         <img src="img/icons/Icons.svg" alt="" class="error">
                                         <p>please agree to the terms and conditions</p>
                                     </small>
+                                </label>
                                 </div>
-
-                            <input type="submit" value="Sign up" class="btn btn_alt">
-
+                                <button class="btn_alt btn_altt" data-item="Sign In">
+                                    <a href="#"  class="link_"> Sign Up</a>
+                                </button>
                         </form>
                         <div class="form_bottom">
                             <h2 class="section_title section_title_normal">Or Sign Up with</h2>
                             <div class="sign_up_other">
-                                <button class="btn btn_other">
+                                <button class="btn_other">
                                     <img src="img/icons/Group.svg" alt="google logo" class="z_icon">
                                      Google
                                 </button>
-                                <button class="btn btn_other">
+                                <button class="btn_other">
                                     <img src="img/icons/apple_logo.svg" alt="apple logo" class="z_icon">
                                     Apple
                                 </button>
                             </div>
-                            <p class="section_title_normal">Already have an account ? <a href="#">Sign in</a> </p>
+                            <p class="section_title_normal">Already have an account? <a href="#">Sign in</a> </p>
                         </div>
                        </div>
         </section>

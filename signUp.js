@@ -47,7 +47,7 @@ form.addEventListener('submit', e=>{
 
 
 //debounce delay function
-const debounce = (fn, delay = 500) => {
+const debounce = (fn, delay = 200) => {
     let timeoutId;
     return (...args) => {
         // cancel the previous timer
