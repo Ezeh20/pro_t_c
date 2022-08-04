@@ -138,7 +138,7 @@ button{
     opacity:0;
     top: 0;
     left: 0;
-    transition: all .9s;
+    transition: all 1.35s;
 }
 
 .btn:active:before{
