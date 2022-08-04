@@ -150,7 +150,7 @@ button{
     opacity: 1;
     top: 0;
     left: 0;
-    transition:all 1.1s;
+    transition:all 1.35s;
 }
 .link_{
     font-size: var(--text-size);
