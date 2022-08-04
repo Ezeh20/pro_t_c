@@ -132,25 +132,25 @@ button{
     position: absolute;
     content: "";
     background-color:#07302e;
-    width: 116px;
-    height: 36.5px;
+    width: 117px;
+    height: 38px;
     border-radius:7px;
     opacity:0;
     top: 0;
     left: 0;
-    transition: all 1.35s;
+    transition: all .4s;
 }
 
 .btn:active:before{
     position: absolute;
     content: "";
-    width: 119px;
-    height: 39px;
+    width: 117px;
+    height: 38px;
     border-radius:7px;
     opacity: 1;
     top: 0;
     left: 0;
-    transition:all 1.35s;
+    transition:all .5s;
 }
 .link_{
     font-size: var(--text-size);
