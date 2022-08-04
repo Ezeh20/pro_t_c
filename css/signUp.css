@@ -132,13 +132,13 @@ button{
     position: absolute;
     content: "";
     background-color:#07302e;
-    width: 117px;
-    height: 38px;
+    width: 116px;
+    height: 36.5px;
     border-radius:7px;
     opacity:0;
     top: 0;
     left: 0;
-    transition: all .8s;
+    transition: all .9s;
 }
 
 .btn:active:before{
@@ -150,7 +150,7 @@ button{
     opacity: 1;
     top: 0;
     left: 0;
-    transition:0;
+    transition:all 1.1s;
 }
 .link_{
     font-size: var(--text-size);
