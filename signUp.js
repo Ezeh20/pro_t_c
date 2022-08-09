@@ -14,12 +14,12 @@ xIcon.addEventListener('click', ()=>{
         inputType.setAttribute('type', 'text')
         //remove the original attribute then set a new attribute with a diffrent src path [your alternate icon]
         xIcon.removeAttribute('src')
-        xIcon.setAttribute('src', 'img/icons/eye.svg')
+        xIcon.setAttribute('src', 'img/eye.svg')
     }else{
         //reset
         inputType.setAttribute('type', 'password')
         xIcon.removeAttribute('src')
-        xIcon.setAttribute('src', 'img/icons/eye-slash.svg')
+        xIcon.setAttribute('src', 'img/eye-slash.svg')
     }
     password=!password
 })
